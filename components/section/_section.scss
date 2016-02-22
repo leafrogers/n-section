@@ -1,0 +1,65 @@
+@import "o-forms/main";
+@import "./section-meta/section-meta";
+@import "./section-sources/section-sources";
+
+.full-cell {
+	position: absolute;
+	height: 100%;
+	right: 0;
+	left: oGridGutter();
+
+	@include oGridRespondTo(M) {
+		left: oGridGutter(M);
+	}
+}
+
+.section--video {
+	.core & {
+		display: none;
+	}
+}
+
+.section-nav {
+	// scss-lint:disable ImportantRule
+	padding-bottom: 0 !important;
+}
+
+.section__column {
+	align-items: stretch;
+
+	& > * {
+		width: 100%;
+		padding-bottom: oGridGutter();
+
+		@include oGridRespondTo(M) {
+			padding-bottom: oGridGutter(M);
+		}
+	}
+}
+
+.section__column--meta {
+	// TODO: better way of defining this
+	.section--top-stories & {
+		@include oGridRespondTo($until: L) {
+			display: none;
+		}
+	}
+}
+
+.section__column,
+// for current front page
+.main-content,
+.sidebar--fastft,
+.header-tabs-panel {
+	&[aria-hidden="true"] {
+		display: none;
+
+		@include oGridRespondTo(L) {
+			display: block;
+		}
+	}
+}
+
+.section__column--sidebar {
+	flex-direction: column;
+}

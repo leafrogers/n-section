@@ -1,0 +1,11 @@
+.section-sources__label {
+	font-family: $o-typography-sans;
+	font-weight: oFontsWeight(light);
+	padding-right: 8px;
+}
+
+.section-sources__select {
+	@include oFormsCommonField();
+	@include oFormsSelect();
+	width: auto;
+}

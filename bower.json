@@ -1,0 +1,11 @@
+{
+  "name": "n-section",
+  "main": [
+      "main.scss"
+  ],
+  "dependencies": {
+    "n-card": "^1.0.2",
+    "n-layout": "^6.0.0",
+    "o-forms": "^2.0.0"
+  }
+}
