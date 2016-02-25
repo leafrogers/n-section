@@ -1,6 +1,6 @@
 {
   "name": "@financial-times/n-section",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Holds Next FT’s section components",
   "main": "main.js",
   "repository": {
